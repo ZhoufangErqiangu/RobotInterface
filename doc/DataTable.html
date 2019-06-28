@@ -1,0 +1,307 @@
+<h1 align=center>FRRJIf.DataTable Reference</h1>
+<p>The FRRJIf.DataTable COM object is a QAxObject with the CLSID .</p>
+<h3>Interfaces</h3>
+<ul>
+<li>DataTable
+</ul>
+<h3>Event Interfaces</h3>
+<ul>
+</ul>
+<h2>Public Slots:</h2>
+<ul>
+<li>IDispatch* <a href="#AddAlarm"><b>AddAlarm</b></a>(FRIF_DATA_TYPE DataType, int AlarmCount, int AlarmMessageMode = 0);</li>
+<li>IDispatch* <a href="#AddCurPos"><b>AddCurPos</b></a>(FRIF_DATA_TYPE DataType, int Group);</li>
+<li>IDispatch* <a href="#AddCurPosUF"><b>AddCurPosUF</b></a>(FRIF_DATA_TYPE DataType, int Group, int UF);</li>
+<li>IDispatch* <a href="#AddNumReg"><b>AddNumReg</b></a>(FRIF_DATA_TYPE DataType, int StartIndex, int EndIndex);</li>
+<li>IDispatch* <a href="#AddPosReg"><b>AddPosReg</b></a>(FRIF_DATA_TYPE DataType, int Group, int StartIndex, int EndIndex);</li>
+<li>IDispatch* <a href="#AddPosRegMG"><b>AddPosRegMG</b></a>(FRIF_DATA_TYPE DataType, QString Group, int StartIndex, int EndIndex);</li>
+<li>IDispatch* <a href="#AddPosRegXyzwpr"><b>AddPosRegXyzwpr</b></a>(FRIF_DATA_TYPE DataType, int Group, int StartIndex, int EndIndex);</li>
+<li>IDispatch* <a href="#AddString"><b>AddString</b></a>(FRIF_DATA_TYPE DataType, int StartIndex, int EndIndex);</li>
+<li>IDispatch* <a href="#AddStringEx"><b>AddStringEx</b></a>(FRIF_DATA_TYPE DataType, QString DataSymbol, int StartIndex, int EndIndex);</li>
+<li>IDispatch* <a href="#AddSysVar"><b>AddSysVar</b></a>(FRIF_DATA_TYPE DataType, QString SysVarName);</li>
+<li>IDispatch* <a href="#AddSysVarPos"><b>AddSysVarPos</b></a>(FRIF_DATA_TYPE DataType, QString SysVarName);</li>
+<li>IDispatch* <a href="#AddTask"><b>AddTask</b></a>(FRIF_DATA_TYPE DataType, int Index);</li>
+<li>void <a href="#AddUserMessage"><b>AddUserMessage</b></a>(QString vstrMessage);</li>
+<li>bool <a href="#Clear"><b>Clear</b></a>();</li>
+<li>int <a href="#Count"><b>Count</b></a>();</li>
+<li>bool <a href="#GetLastDataFloat"><b>GetLastDataFloat</b></a>(int lngAddress, double& sngValue);</li>
+<li>QString <a href="#GetTypeName"><b>GetTypeName</b></a>();</li>
+<li>IDispatch* <a href="#Item"><b>Item</b></a>(QVariant Index);</li>
+<li>void <a href="#Kill"><b>Kill</b></a>();</li>
+<li>bool <a href="#Refresh"><b>Refresh</b></a>();</li>
+</ul>
+<h2>Signals:</h2>
+<ul>
+<li>void <a href="#exception"><b>exception</b></a>(int code, QString source, QString disc, QString help);</li>
+<li>void <a href="#propertyChanged"><b>propertyChanged</b></a>(QString name);</li>
+<li>void <a href="#signal"><b>signal</b></a>(QString name, int argc, void* argv);</li>
+</ul>
+<h2>Properties:</h2>
+<ul>
+<li>QString <a href="#objectName"><b>objectName</b></a>;</li>
+<li>bool <a href="#DebugLog"><b>DebugLog</b></a>;</li>
+<li>bool <a href="#Fixed"><b>Fixed</b></a>;</li>
+<li>int <a href="#ObjectID"><b>ObjectID</b></a>;</li>
+<li>bool <a href="#Valid"><b>Valid</b></a>;</li>
+<li>QString <a href="#control"><b>control</b></a>;</li>
+</ul>
+<hr><h2>Member Type Documentation</h2>
+<h3><a name=FRIF_DATA_TYPE></a>FRIF_DATA_TYPE</h3>
+<ul>
+<li>NUMREG_INT	=0</li>
+<li>NUMREG_REAL	=1</li>
+<li>POSREG	=2</li>
+<li>CURPOS	=3</li>
+<li>TASK	=4</li>
+<li>SYSVAR_INT	=5</li>
+<li>SYSVAR_REAL	=6</li>
+<li>SYSVAR_POS	=7</li>
+<li>SYSVAR_STRING	=8</li>
+<li>ALARM_LIST	=9</li>
+<li>ALARM_CURRENT	=10</li>
+<li>ALARM_PASSWORD	=11</li>
+<li>POSREG_XYZWPR	=12</li>
+<li>STRREG	=13</li>
+<li>STRREG_COMMENT	=14</li>
+<li>NUMREG_COMMENT	=15</li>
+<li>POSREG_COMMENT	=16</li>
+<li>SDI_COMMENT	=17</li>
+<li>SDO_COMMENT	=18</li>
+<li>RDI_COMMENT	=19</li>
+<li>RDO_COMMENT	=20</li>
+<li>UI_COMMENT	=21</li>
+<li>UO_COMMENT	=22</li>
+<li>SI_COMMENT	=23</li>
+<li>SO_COMMENT	=24</li>
+<li>WI_COMMENT	=25</li>
+<li>WO_COMMENT	=26</li>
+<li>WSI_COMMENT	=27</li>
+<li>WSO_COMMENT	=28</li>
+<li>GI_COMMENT	=29</li>
+<li>GO_COMMENT	=30</li>
+<li>AI_COMMENT	=31</li>
+<li>AO_COMMENT	=32</li>
+<li>TASK_IGNORE_MACRO	=33</li>
+<li>TASK_IGNORE_KAREL	=34</li>
+<li>TASK_IGNORE_MACRO_KAREL	=35</li>
+<li>POSREGMG	=36</li>
+</ul>
+<hr><h2>Member Function Documentation</h2>
+<h3><a name=AddAlarm></a>IDispatch* AddAlarm (FRIF_DATA_TYPE DataType, int AlarmCount, int AlarmMessageMode)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, int, int)), object, SLOT(AddAlarm(FRIF_DATA_TYPE, int, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddAlarm(FRIF_DATA_TYPE, int, int)", params);</pre>
+
+<h3><a name=AddCurPos></a>IDispatch* AddCurPos (FRIF_DATA_TYPE DataType, int Group)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, int)), object, SLOT(AddCurPos(FRIF_DATA_TYPE, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddCurPos(FRIF_DATA_TYPE, int)", params);</pre>
+
+<h3><a name=AddCurPosUF></a>IDispatch* AddCurPosUF (FRIF_DATA_TYPE DataType, int Group, int UF)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, int, int)), object, SLOT(AddCurPosUF(FRIF_DATA_TYPE, int, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddCurPosUF(FRIF_DATA_TYPE, int, int)", params);</pre>
+
+<h3><a name=AddNumReg></a>IDispatch* AddNumReg (FRIF_DATA_TYPE DataType, int StartIndex, int EndIndex)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, int, int)), object, SLOT(AddNumReg(FRIF_DATA_TYPE, int, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddNumReg(FRIF_DATA_TYPE, int, int)", params);</pre>
+
+<h3><a name=AddPosReg></a>IDispatch* AddPosReg (FRIF_DATA_TYPE DataType, int Group, int StartIndex, int EndIndex)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, int, int, int)), object, SLOT(AddPosReg(FRIF_DATA_TYPE, int, int, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddPosReg(FRIF_DATA_TYPE, int, int, int)", params);</pre>
+
+<h3><a name=AddPosRegMG></a>IDispatch* AddPosRegMG (FRIF_DATA_TYPE DataType, QString Group, int StartIndex, int EndIndex)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, QString, int, int)), object, SLOT(AddPosRegMG(FRIF_DATA_TYPE, QString, int, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddPosRegMG(FRIF_DATA_TYPE, QString, int, int)", params);</pre>
+
+<h3><a name=AddPosRegXyzwpr></a>IDispatch* AddPosRegXyzwpr (FRIF_DATA_TYPE DataType, int Group, int StartIndex, int EndIndex)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, int, int, int)), object, SLOT(AddPosRegXyzwpr(FRIF_DATA_TYPE, int, int, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddPosRegXyzwpr(FRIF_DATA_TYPE, int, int, int)", params);</pre>
+
+<h3><a name=AddString></a>IDispatch* AddString (FRIF_DATA_TYPE DataType, int StartIndex, int EndIndex)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, int, int)), object, SLOT(AddString(FRIF_DATA_TYPE, int, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddString(FRIF_DATA_TYPE, int, int)", params);</pre>
+
+<h3><a name=AddStringEx></a>IDispatch* AddStringEx (FRIF_DATA_TYPE DataType, QString DataSymbol, int StartIndex, int EndIndex)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, QString, int, int)), object, SLOT(AddStringEx(FRIF_DATA_TYPE, QString, int, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddStringEx(FRIF_DATA_TYPE, QString, int, int)", params);</pre>
+
+<h3><a name=AddSysVar></a>IDispatch* AddSysVar (FRIF_DATA_TYPE DataType, QString SysVarName)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, QString)), object, SLOT(AddSysVar(FRIF_DATA_TYPE, QString)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddSysVar(FRIF_DATA_TYPE, QString)", params);</pre>
+
+<h3><a name=AddSysVarPos></a>IDispatch* AddSysVarPos (FRIF_DATA_TYPE DataType, QString SysVarName)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, QString)), object, SLOT(AddSysVarPos(FRIF_DATA_TYPE, QString)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddSysVarPos(FRIF_DATA_TYPE, QString)", params);</pre>
+
+<h3><a name=AddTask></a>IDispatch* AddTask (FRIF_DATA_TYPE DataType, int Index)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(FRIF_DATA_TYPE, int)), object, SLOT(AddTask(FRIF_DATA_TYPE, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("AddTask(FRIF_DATA_TYPE, int)", params);</pre>
+
+<h3><a name=AddUserMessage></a>void AddUserMessage (QString vstrMessage)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(QString)), object, SLOT(AddUserMessage(QString)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	object->dynamicCall("AddUserMessage(QString)", params);</pre>
+
+<h3><a name=Clear></a>bool Clear ()<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(Clear()));</pre>
+<p>Or call the function directly:<pre>
+	bool result = object->dynamicCall("Clear()").toBool();</pre>
+
+<h3><a name=Count></a>int Count ()<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(Count()));</pre>
+<p>Or call the function directly:<pre>
+	int result = object->dynamicCall("Count()").toInt();</pre>
+
+<h3><a name=GetLastDataFloat></a>bool GetLastDataFloat (int lngAddress, double& sngValue)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, double&)), object, SLOT(GetLastDataFloat(int, double&)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("GetLastDataFloat(int, double&)", params).toBool();</pre>
+
+<h3><a name=GetTypeName></a>QString GetTypeName ()<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(GetTypeName()));</pre>
+<p>Or call the function directly:<pre>
+	QString result = object->dynamicCall("GetTypeName()").toString();</pre>
+
+<h3><a name=Item></a>IDispatch* Item (QVariant Index)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(QVariant)), object, SLOT(Item(QVariant)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("Item(QVariant)", params);</pre>
+
+<h3><a name=Kill></a>void Kill ()<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(Kill()));</pre>
+<p>Or call the function directly:<pre>
+	object->dynamicCall("Kill()");</pre>
+
+<h3><a name=Refresh></a>bool Refresh ()<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(Refresh()));</pre>
+<p>Or call the function directly:<pre>
+	bool result = object->dynamicCall("Refresh()").toBool();</pre>
+
+<h3><a name=exception></a>void exception (int code, QString source, QString disc, QString help)<tt> [signal]</tt></h3>
+<p>
+<p>Connect a slot to this signal:<pre>
+	QObject::connect(object, SIGNAL(exception(int, QString, QString, QString)), receiver, SLOT(someSlot(int, QString, QString, QString)));</pre>
+
+<h3><a name=propertyChanged></a>void propertyChanged (QString name)<tt> [signal]</tt></h3>
+<p>
+<p>Connect a slot to this signal:<pre>
+	QObject::connect(object, SIGNAL(propertyChanged(QString)), receiver, SLOT(someSlot(QString)));</pre>
+
+<h3><a name=signal></a>void signal (QString name, int argc, void* argv)<tt> [signal]</tt></h3>
+<p>
+<p>Connect a slot to this signal:<pre>
+	QObject::connect(object, SIGNAL(signal(QString, int, void*)), receiver, SLOT(someSlot(QString, int, void*)));</pre>
+
+<hr><h2>Property Documentation</h2>
+<h3><a name=objectName></a>QString objectName</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	QString val = object->property("objectName").toString();
+</pre>
+Set this property' value using QObject::setProperty:<pre>
+	QString newValue = ...
+	object->setProperty("objectName", newValue);
+</pre>
+Or using the <a href="#setObjectName">setObjectName</a> slot.
+
+<h3><a name=DebugLog></a>bool DebugLog</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	bool val = object->property("DebugLog").toBool();
+</pre>
+
+<h3><a name=Fixed></a>bool Fixed</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	bool val = object->property("Fixed").toBool();
+</pre>
+
+<h3><a name=ObjectID></a>int ObjectID</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	int val = object->property("ObjectID").toInt();
+</pre>
+
+<h3><a name=Valid></a>bool Valid</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	bool val = object->property("Valid").toBool();
+</pre>
+
+<h3><a name=control></a>QString control</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	QString val = object->property("control").toString();
+</pre>
+Set this property' value using QObject::setProperty:<pre>
+	QString newValue = ...
+	object->setProperty("control", newValue);
+</pre>
+Or using the <a href="#setControl">setControl</a> slot.
+
+

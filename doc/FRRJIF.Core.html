@@ -1,0 +1,521 @@
+<h1 align=center>FRRJIf.Core Reference</h1>
+<p>The FRRJIf.Core COM object is a QAxObject with the CLSID {a58de18a-4331-4811-b3fa-981af68d4786}.</p>
+<h3>Interfaces</h3>
+<ul>
+<li>Core
+</ul>
+<h3>Event Interfaces</h3>
+<ul>
+</ul>
+<h2>Public Slots:</h2>
+<ul>
+<li>void <a href="#AddUserMessage"><b>AddUserMessage</b></a>(QString vstrMessage);</li>
+<li>bool <a href="#ClearAlarm"><b>ClearAlarm</b></a>(int vlngType = 0);</li>
+<li>bool <a href="#Connect"><b>Connect</b></a>(QString HostName);</li>
+<li>bool <a href="#Disconnect"><b>Disconnect</b></a>();</li>
+<li>QString <a href="#GetDebugMessages"><b>GetDebugMessages</b></a>();</li>
+<li>IDispatch* <a href="#GetLib"><b>GetLib</b></a>();</li>
+<li>QString <a href="#GetTypeName"><b>GetTypeName</b></a>();</li>
+<li>bool <a href="#ProtectSetPassword"><b>ProtectSetPassword</b></a>(QString strPassword);</li>
+<li>bool <a href="#ReadGI"><b>ReadGI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#ReadGO"><b>ReadGO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#ReadRDI"><b>ReadRDI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#ReadRDO"><b>ReadRDO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#ReadSDI"><b>ReadSDI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#ReadSDO"><b>ReadSDO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#ReadSI"><b>ReadSI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#ReadSO"><b>ReadSO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#ReadUI"><b>ReadUI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#ReadUO"><b>ReadUO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>void <a href="#SetClientID"><b>SetClientID</b></a>(int ClientID);</li>
+<li>void <a href="#SetDebugLog"><b>SetDebugLog</b></a>(bool DebugLog);</li>
+<li>void <a href="#SetPortNumber"><b>SetPortNumber</b></a>(int PortNumber);</li>
+<li>void <a href="#SetTimeOutValue"><b>SetTimeOutValue</b></a>(int TimeOutValue);</li>
+<li>bool <a href="#WriteGI"><b>WriteGI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#WriteGO"><b>WriteGO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#WriteRDI"><b>WriteRDI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#WriteRDO"><b>WriteRDO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#WriteSDI"><b>WriteSDI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#WriteSDO"><b>WriteSDO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#WriteSI"><b>WriteSI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#WriteSO"><b>WriteSO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#WriteUI"><b>WriteUI</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+<li>bool <a href="#WriteUO"><b>WriteUO</b></a>(int Index, QVariantList*& Buffer, int Count);</li>
+</ul>
+<h2>Signals:</h2>
+<ul>
+<li>void <a href="#exception"><b>exception</b></a>(int code, QString source, QString disc, QString help);</li>
+<li>void <a href="#propertyChanged"><b>propertyChanged</b></a>(QString name);</li>
+<li>void <a href="#signal"><b>signal</b></a>(QString name, int argc, void* argv);</li>
+</ul>
+<h2>Properties:</h2>
+<ul>
+<li>QString <a href="#objectName"><b>objectName</b></a>;</li>
+<li>int <a href="#ClientID"><b>ClientID</b></a>;</li>
+<li>int <a href="#ConnectState"><b>ConnectState</b></a>;</li>
+<li>IDispatch* <a href="#DataTable"><b>DataTable</b></a>;</li>
+<li>IDispatch* <a href="#DataTable2"><b>DataTable2</b></a>;</li>
+<li>bool <a href="#DebugLog"><b>DebugLog</b></a>;</li>
+<li>QString <a href="#DebugMessage"><b>DebugMessage</b></a>;</li>
+<li>bool <a href="#IsConnected"><b>IsConnected</b></a>;</li>
+<li>int <a href="#ObjectID"><b>ObjectID</b></a>;</li>
+<li>int <a href="#PortNumber"><b>PortNumber</b></a>;</li>
+<li>bool <a href="#ProtectAvailable"><b>ProtectAvailable</b></a>;</li>
+<li>int <a href="#ProtectErrorNumber"><b>ProtectErrorNumber</b></a>;</li>
+<li>QString <a href="#ProtectPCID"><b>ProtectPCID</b></a>;</li>
+<li>QString <a href="#ProtectStatus"><b>ProtectStatus</b></a>;</li>
+<li>int <a href="#ProtectTrialRemainDays"><b>ProtectTrialRemainDays</b></a>;</li>
+<li>int <a href="#TimeOutValue"><b>TimeOutValue</b></a>;</li>
+<li>QString <a href="#control"><b>control</b></a>;</li>
+<li>int <a href="#mlngDataTableCount"><b>mlngDataTableCount</b></a>;</li>
+</ul>
+<hr><h2>Member Type Documentation</h2>
+<h3><a name=FRIF_DATA_TYPE></a>FRIF_DATA_TYPE</h3>
+<ul>
+<li>NUMREG_INT	=0</li>
+<li>NUMREG_REAL	=1</li>
+<li>POSREG	=2</li>
+<li>CURPOS	=3</li>
+<li>TASK	=4</li>
+<li>SYSVAR_INT	=5</li>
+<li>SYSVAR_REAL	=6</li>
+<li>SYSVAR_POS	=7</li>
+<li>SYSVAR_STRING	=8</li>
+<li>ALARM_LIST	=9</li>
+<li>ALARM_CURRENT	=10</li>
+<li>ALARM_PASSWORD	=11</li>
+<li>POSREG_XYZWPR	=12</li>
+<li>STRREG	=13</li>
+<li>STRREG_COMMENT	=14</li>
+<li>NUMREG_COMMENT	=15</li>
+<li>POSREG_COMMENT	=16</li>
+<li>SDI_COMMENT	=17</li>
+<li>SDO_COMMENT	=18</li>
+<li>RDI_COMMENT	=19</li>
+<li>RDO_COMMENT	=20</li>
+<li>UI_COMMENT	=21</li>
+<li>UO_COMMENT	=22</li>
+<li>SI_COMMENT	=23</li>
+<li>SO_COMMENT	=24</li>
+<li>WI_COMMENT	=25</li>
+<li>WO_COMMENT	=26</li>
+<li>WSI_COMMENT	=27</li>
+<li>WSO_COMMENT	=28</li>
+<li>GI_COMMENT	=29</li>
+<li>GO_COMMENT	=30</li>
+<li>AI_COMMENT	=31</li>
+<li>AO_COMMENT	=32</li>
+<li>TASK_IGNORE_MACRO	=33</li>
+<li>TASK_IGNORE_KAREL	=34</li>
+<li>TASK_IGNORE_MACRO_KAREL	=35</li>
+<li>POSREGMG	=36</li>
+</ul>
+<hr><h2>Member Function Documentation</h2>
+<h3><a name=AddUserMessage></a>void AddUserMessage (QString vstrMessage)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(QString)), object, SLOT(AddUserMessage(QString)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	object->dynamicCall("AddUserMessage(QString)", params);</pre>
+
+<h3><a name=ClearAlarm></a>bool ClearAlarm (int vlngType)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int)), object, SLOT(ClearAlarm(int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ClearAlarm(int)", params).toBool();</pre>
+
+<h3><a name=Connect></a>bool Connect (QString HostName)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(QString)), object, SLOT(Connect(QString)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("Connect(QString)", params).toBool();</pre>
+
+<h3><a name=Disconnect></a>bool Disconnect ()<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(Disconnect()));</pre>
+<p>Or call the function directly:<pre>
+	bool result = object->dynamicCall("Disconnect()").toBool();</pre>
+
+<h3><a name=GetDebugMessages></a>QString GetDebugMessages ()<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(GetDebugMessages()));</pre>
+<p>Or call the function directly:<pre>
+	QString result = object->dynamicCall("GetDebugMessages()").toString();</pre>
+
+<h3><a name=GetLib></a>IDispatch* GetLib ()<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(GetLib()));</pre>
+<p>Or call the function directly:<pre>
+	QAxObject * result = object->querySubObject("GetLib()");</pre>
+
+<h3><a name=GetTypeName></a>QString GetTypeName ()<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(GetTypeName()));</pre>
+<p>Or call the function directly:<pre>
+	QString result = object->dynamicCall("GetTypeName()").toString();</pre>
+
+<h3><a name=ProtectSetPassword></a>bool ProtectSetPassword (QString strPassword)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(QString)), object, SLOT(ProtectSetPassword(QString)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ProtectSetPassword(QString)", params).toBool();</pre>
+
+<h3><a name=ReadGI></a>bool ReadGI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadGI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadGI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=ReadGO></a>bool ReadGO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadGO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadGO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=ReadRDI></a>bool ReadRDI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadRDI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadRDI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=ReadRDO></a>bool ReadRDO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadRDO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadRDO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=ReadSDI></a>bool ReadSDI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadSDI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadSDI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=ReadSDO></a>bool ReadSDO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadSDO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadSDO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=ReadSI></a>bool ReadSI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadSI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadSI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=ReadSO></a>bool ReadSO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadSO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadSO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=ReadUI></a>bool ReadUI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadUI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadUI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=ReadUO></a>bool ReadUO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(ReadUO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("ReadUO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=SetClientID></a>void SetClientID (int ClientID)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int)), object, SLOT(SetClientID(int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	object->dynamicCall("SetClientID(int)", params);</pre>
+
+<h3><a name=SetDebugLog></a>void SetDebugLog (bool DebugLog)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(bool)), object, SLOT(SetDebugLog(bool)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	object->dynamicCall("SetDebugLog(bool)", params);</pre>
+
+<h3><a name=SetPortNumber></a>void SetPortNumber (int PortNumber)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int)), object, SLOT(SetPortNumber(int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	object->dynamicCall("SetPortNumber(int)", params);</pre>
+
+<h3><a name=SetTimeOutValue></a>void SetTimeOutValue (int TimeOutValue)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int)), object, SLOT(SetTimeOutValue(int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	object->dynamicCall("SetTimeOutValue(int)", params);</pre>
+
+<h3><a name=WriteGI></a>bool WriteGI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteGI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteGI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=WriteGO></a>bool WriteGO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteGO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteGO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=WriteRDI></a>bool WriteRDI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteRDI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteRDI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=WriteRDO></a>bool WriteRDO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteRDO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteRDO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=WriteSDI></a>bool WriteSDI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteSDI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteSDI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=WriteSDO></a>bool WriteSDO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteSDO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteSDO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=WriteSI></a>bool WriteSI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteSI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteSI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=WriteSO></a>bool WriteSO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteSO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteSO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=WriteUI></a>bool WriteUI (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteUI(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteUI(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=WriteUO></a>bool WriteUO (int Index, QVariantList*& Buffer, int Count)<tt> [slot]</tt></h3>
+<p>
+<p>Connect a signal to this slot:<pre>
+	QObject::connect(sender, SIGNAL(someSignal(int, QVariantList*&, int)), object, SLOT(WriteUO(int, QVariantList*&, int)));</pre>
+<p>Or call the function directly:<pre>
+	QVariantList params = ...
+	bool result = object->dynamicCall("WriteUO(int, QVariantList*&, int)", params).toBool();</pre>
+
+<h3><a name=exception></a>void exception (int code, QString source, QString disc, QString help)<tt> [signal]</tt></h3>
+<p>
+<p>Connect a slot to this signal:<pre>
+	QObject::connect(object, SIGNAL(exception(int, QString, QString, QString)), receiver, SLOT(someSlot(int, QString, QString, QString)));</pre>
+
+<h3><a name=propertyChanged></a>void propertyChanged (QString name)<tt> [signal]</tt></h3>
+<p>
+<p>Connect a slot to this signal:<pre>
+	QObject::connect(object, SIGNAL(propertyChanged(QString)), receiver, SLOT(someSlot(QString)));</pre>
+
+<h3><a name=signal></a>void signal (QString name, int argc, void* argv)<tt> [signal]</tt></h3>
+<p>
+<p>Connect a slot to this signal:<pre>
+	QObject::connect(object, SIGNAL(signal(QString, int, void*)), receiver, SLOT(someSlot(QString, int, void*)));</pre>
+
+<hr><h2>Property Documentation</h2>
+<h3><a name=objectName></a>QString objectName</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	QString val = object->property("objectName").toString();
+</pre>
+Set this property' value using QObject::setProperty:<pre>
+	QString newValue = ...
+	object->setProperty("objectName", newValue);
+</pre>
+Or using the <a href="#setObjectName">setObjectName</a> slot.
+
+<h3><a name=ClientID></a>int ClientID</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	int val = object->property("ClientID").toInt();
+</pre>
+Set this property' value using QObject::setProperty:<pre>
+	int newValue = ...
+	object->setProperty("ClientID", newValue);
+</pre>
+Or using the <a href="#SetClientID">SetClientID</a> slot.
+
+<h3><a name=ConnectState></a>int ConnectState</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	int val = object->property("ConnectState").toInt();
+</pre>
+
+<h3><a name=DataTable></a>IDispatch* DataTable</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	IDispatch* val = object->property("DataTable").toIDispatch*();
+</pre>
+
+<h3><a name=DataTable2></a>IDispatch* DataTable2</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	IDispatch* val = object->property("DataTable2").toIDispatch*();
+</pre>
+
+<h3><a name=DebugLog></a>bool DebugLog</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	bool val = object->property("DebugLog").toBool();
+</pre>
+Set this property' value using QObject::setProperty:<pre>
+	bool newValue = ...
+	object->setProperty("DebugLog", newValue);
+</pre>
+Or using the <a href="#SetDebugLog">SetDebugLog</a> slot.
+
+<h3><a name=DebugMessage></a>QString DebugMessage</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	QString val = object->property("DebugMessage").toString();
+</pre>
+
+<h3><a name=IsConnected></a>bool IsConnected</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	bool val = object->property("IsConnected").toBool();
+</pre>
+
+<h3><a name=ObjectID></a>int ObjectID</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	int val = object->property("ObjectID").toInt();
+</pre>
+
+<h3><a name=PortNumber></a>int PortNumber</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	int val = object->property("PortNumber").toInt();
+</pre>
+Set this property' value using QObject::setProperty:<pre>
+	int newValue = ...
+	object->setProperty("PortNumber", newValue);
+</pre>
+Or using the <a href="#SetPortNumber">SetPortNumber</a> slot.
+
+<h3><a name=ProtectAvailable></a>bool ProtectAvailable</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	bool val = object->property("ProtectAvailable").toBool();
+</pre>
+
+<h3><a name=ProtectErrorNumber></a>int ProtectErrorNumber</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	int val = object->property("ProtectErrorNumber").toInt();
+</pre>
+
+<h3><a name=ProtectPCID></a>QString ProtectPCID</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	QString val = object->property("ProtectPCID").toString();
+</pre>
+
+<h3><a name=ProtectStatus></a>QString ProtectStatus</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	QString val = object->property("ProtectStatus").toString();
+</pre>
+
+<h3><a name=ProtectTrialRemainDays></a>int ProtectTrialRemainDays</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	int val = object->property("ProtectTrialRemainDays").toInt();
+</pre>
+
+<h3><a name=TimeOutValue></a>int TimeOutValue</h3>
+<p>It must be 100 or bigger. Unit is mm second.
+
+<p>Read this property's value using QObject::property:<pre>
+	int val = object->property("TimeOutValue").toInt();
+</pre>
+Set this property' value using QObject::setProperty:<pre>
+	int newValue = ...
+	object->setProperty("TimeOutValue", newValue);
+</pre>
+Or using the <a href="#SetTimeOutValue">SetTimeOutValue</a> slot.
+
+<h3><a name=control></a>QString control</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	QString val = object->property("control").toString();
+</pre>
+Set this property' value using QObject::setProperty:<pre>
+	QString newValue = ...
+	object->setProperty("control", newValue);
+</pre>
+Or using the <a href="#setControl">setControl</a> slot.
+
+<h3><a name=mlngDataTableCount></a>int mlngDataTableCount</h3>
+<p>
+<p>Read this property's value using QObject::property:<pre>
+	int val = object->property("mlngDataTableCount").toInt();
+</pre>
+
+
